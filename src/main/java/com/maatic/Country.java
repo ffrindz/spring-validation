@@ -2,12 +2,6 @@ package com.maatic;
 
 import java.util.Objects;
 
-@SpecialCharacter.List({
-    @SpecialCharacter(
-            field = "name",
-            message = "Field contains special character"
-    )
-})
 public class Country {
     private String name;
 

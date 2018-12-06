@@ -1,29 +1,18 @@
 package com.maatic;
 
-import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.Objects;
 
-@SpecialCharacter.List({
-    @SpecialCharacter(
-            field = "street",
-            message = "Field contains special character"
-    ),
-    @SpecialCharacter(
-            field = "state",
-            message = "Field contains special character"
-    ),
-    @SpecialCharacter(
-            field = "phoneNo",
-            message = "Field contains special character"
-    )
-})
 public class Address {
+    @NotNull
     private String street;
+    @NotNull
     private String state;
     private int zipCode;
+    @NotNull
     private List<String> phoneNo;
-    @Valid
+    @NotNull
     private List<Country> country;
 
     public String getStreet() {

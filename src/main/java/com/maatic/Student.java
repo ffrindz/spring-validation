@@ -1,17 +1,13 @@
 package com.maatic;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 import java.util.Objects;
 
 public class Student {
-    @NotNull
     private String name;
 
     private int age;
 
-    @Valid
-    private Address address;
+    private Object address;
 
     public String getName() {
         return name;
@@ -29,7 +25,7 @@ public class Student {
         this.age = age;
     }
 
-    public Address getAddress() {
+    public Object getAddress() {
         return address;
     }
 
